@@ -6,10 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vanilla App Template</title>
     <script type="module" crossorigin src="/goit-js-hw-12/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/goit-js-hw-12/assets/index-D8Btx21I.css">
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-12/assets/vendor-BSTwZ_tR.js">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-12/assets/vendor-DumFYO8Z.css">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-12/assets/index-Jn9SlCBh.css">
   </head>
   <body>
-    <main></main>
+    <main>
+      <form class="form" id="search-form">
+        <label>
+          <input
+            type="text"
+            name="search-text"
+            placeholder="Search images..."
+            required
+            aria-label="Пошуковий запит"
+          />
+        </label>
+        <button type="submit">Search</button>
+      </form>
+      <ul class="gallery" id="gallery" aria-live="polite"></ul>
+      <div class="controls">
+        <button id="load-more" class="load-more is-hidden" type="button">
+          Load more
+        </button>
+
+        <div id="loader" class="loader-wrapper is-hidden" aria-hidden="true">
+          <span class="loader"></span>
+        </div>
+      </div>
+    </main>
 
   </body>
 </html>
